@@ -14,6 +14,7 @@
 		7A5C780E1BBA5EE200B877B4 /* Chi_Le_MaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C780D1BBA5EE200B877B4 /* Chi_Le_MaTests.swift */; };
 		7A5C78191BBA5EE300B877B4 /* Chi_Le_MaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C78181BBA5EE300B877B4 /* Chi_Le_MaUITests.swift */; };
 		7A5C78271BBA5F2B00B877B4 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C78261BBA5F2B00B877B4 /* RestaurantTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C782A1BBA804A00B877B4 /* RestaurantTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7A5C78181BBA5EE300B877B4 /* Chi_Le_MaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chi_Le_MaUITests.swift; sourceTree = "<group>"; };
 		7A5C781A1BBA5EE300B877B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5C78261BBA5F2B00B877B4 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		7A5C782A1BBA804A00B877B4 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		7A5C77F71BBA5EE200B877B4 /* Chi-Le-Ma */ = {
 			isa = PBXGroup;
 			children = (
-				7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */,
-				7A5C78261BBA5F2B00B877B4 /* RestaurantTableViewController.swift */,
 				7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */,
-				7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */,
-				7A5C78011BBA5EE200B877B4 /* LaunchScreen.storyboard */,
-				7A5C78041BBA5EE200B877B4 /* Info.plist */,
+				7A5C78281BBA768600B877B4 /* Controllers */,
+				7A5C782C1BBA830A00B877B4 /* Cells */,
+				7A5C78291BBA769800B877B4 /* Supporting Files */,
 			);
 			path = "Chi-Le-Ma";
 			sourceTree = "<group>";
@@ -123,6 +123,33 @@
 				7A5C781A1BBA5EE300B877B4 /* Info.plist */,
 			);
 			path = "Chi-Le-MaUITests";
+			sourceTree = "<group>";
+		};
+		7A5C78281BBA768600B877B4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C78261BBA5F2B00B877B4 /* RestaurantTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7A5C78291BBA769800B877B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */,
+				7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */,
+				7A5C78011BBA5EE200B877B4 /* LaunchScreen.storyboard */,
+				7A5C78041BBA5EE200B877B4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A5C782C1BBA830A00B877B4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C782A1BBA804A00B877B4 /* RestaurantTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */,
+				7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */,
 				7A5C78271BBA5F2B00B877B4 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

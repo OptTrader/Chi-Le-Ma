@@ -13,6 +13,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 {
   @IBOutlet weak var restaurantImageView: UIImageView!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var ratingButton: UIButton!
   
   var restaurant: Restaurant!
   
@@ -73,7 +74,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     return cell
   }
   
-  @IBAction func close(segue: UIStoryboardSegue) {
+  @IBAction func close(segue: UIStoryboardSegue)
+  {
+    if let reviewViewController = segue.sourceViewController as? ReviewViewController
+    {
+      if let rating = reviewViewController.rating
+      {
+        ratingButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
+      }
+    }
   }
   
 

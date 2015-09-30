@@ -18,6 +18,7 @@
 		7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C782D1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A5C78301BBB826500B877B4 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C782F1BBB826500B877B4 /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDE35A1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7A5C782D1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		7A5C782F1BBB826500B877B4 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		7ADDE35A1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
+		7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				7A5C78261BBA5F2B00B877B4 /* RestaurantTableViewController.swift */,
 				7A5C782D1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift */,
+				7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				7A5C78301BBB826500B877B4 /* Restaurant.swift in Sources */,
 				7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */,
+				7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */,
 				7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */,
 				7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */,
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,

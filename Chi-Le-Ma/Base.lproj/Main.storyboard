@@ -187,6 +187,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ratingButton" destination="4N8-7v-aD4" id="iyU-2r-5zf"/>
                         <outlet property="restaurantImageView" destination="ajy-Ro-K7Y" id="x2W-ks-MMl"/>
                         <outlet property="tableView" destination="Y5A-OV-0fD" id="ssj-b1-Y4c"/>
                     </connections>
@@ -195,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="1543" y="278"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="hip-mx-bcZ">
             <objects>
-                <viewController id="bcC-0X-VyS" sceneMemberID="viewController">
+                <viewController id="bcC-0X-VyS" customClass="ReviewViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lFK-RJ-Ygq"/>
                         <viewControllerLayoutGuide type="bottom" id="HZf-jg-BK4"/>
@@ -219,56 +220,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tFj-w5-6o4">
-                                <rect key="frame" x="185" y="212" width="230" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-VY-bv5">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="BJF-hn-ntk"/>
-                                            <constraint firstAttribute="width" constant="70" id="N4p-n5-pmA"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Dislike" image="dislike"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-JS-FTs">
-                                        <rect key="frame" x="80" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="ei8-YZ-jxM"/>
-                                            <constraint firstAttribute="height" constant="70" id="gQ8-OD-bTd"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Good" image="good"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-dr-e5T">
-                                        <rect key="frame" x="160" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="dYj-Ke-u8L"/>
-                                            <constraint firstAttribute="height" constant="70" id="zhU-mf-MB4"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Great" image="great"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPU-Oj-kor">
                                 <rect key="frame" x="550" y="20" width="30" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -279,25 +230,88 @@
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Close" image="close"/>
                                 <connections>
-                                    <segue destination="Sq1-Wi-K1O" kind="unwind" unwindAction="close:" id="UCg-u6-c9b"/>
+                                    <segue destination="Sq1-Wi-K1O" kind="unwind" identifier="unwindToDetailView" unwindAction="close:" id="UCg-u6-c9b"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h1O-BF-eyb">
+                                <rect key="frame" x="185" y="212" width="230" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPj-q0-bwx">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.93934428690000005" green="0.28993204239999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="M6p-gv-pr3"/>
+                                            <constraint firstAttribute="height" constant="70" id="ROB-Mc-9Dn"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Dislike" image="dislike"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ratingSelected:" destination="bcC-0X-VyS" eventType="touchUpInside" id="ILD-y8-PXw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw1-0E-BYk">
+                                        <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.93934428690000005" green="0.28993204239999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="dU1-Do-z98"/>
+                                            <constraint firstAttribute="width" constant="70" id="kbe-fX-E4B"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Good" image="good"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ratingSelected:" destination="bcC-0X-VyS" eventType="touchUpInside" id="rbS-ic-Lk7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRN-aG-3IK">
+                                        <rect key="frame" x="160" y="0.0" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.93934428690000005" green="0.28993204239999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="93Q-yD-uZX"/>
+                                            <constraint firstAttribute="width" constant="70" id="mzN-sh-E0i"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Great" image="great"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ratingSelected:" destination="bcC-0X-VyS" eventType="touchUpInside" id="GgS-kZ-kz4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fe3-GN-OcO" firstAttribute="centerX" secondItem="tFj-w5-6o4" secondAttribute="centerX" id="7jm-Ag-sv5"/>
                             <constraint firstItem="Fe3-GN-OcO" firstAttribute="top" secondItem="lFK-RJ-Ygq" secondAttribute="bottom" constant="80" id="9bT-j3-qtu"/>
-                            <constraint firstItem="tFj-w5-6o4" firstAttribute="top" secondItem="Fe3-GN-OcO" secondAttribute="bottom" constant="8" symbolic="YES" id="Csl-sF-Apb"/>
                             <constraint firstItem="7Fk-rv-Rs1" firstAttribute="leading" secondItem="JYz-t4-MUt" secondAttribute="leading" id="EDH-wG-Jr8"/>
                             <constraint firstItem="7Fk-rv-Rs1" firstAttribute="bottom" secondItem="HZf-jg-BK4" secondAttribute="top" id="EQH-V7-N1K"/>
+                            <constraint firstItem="h1O-BF-eyb" firstAttribute="top" secondItem="Fe3-GN-OcO" secondAttribute="bottom" constant="8" symbolic="YES" id="O1w-Qp-5sa"/>
                             <constraint firstItem="Fe3-GN-OcO" firstAttribute="centerX" secondItem="7Fk-rv-Rs1" secondAttribute="centerX" id="OsV-u0-r0f"/>
-                            <constraint firstItem="HZf-jg-BK4" firstAttribute="top" secondItem="tFj-w5-6o4" secondAttribute="bottom" constant="318" id="QZI-kk-WQK"/>
+                            <constraint firstItem="HZf-jg-BK4" firstAttribute="top" secondItem="h1O-BF-eyb" secondAttribute="bottom" constant="318" id="Xb6-bk-K5D"/>
                             <constraint firstItem="7Fk-rv-Rs1" firstAttribute="top" secondItem="JYz-t4-MUt" secondAttribute="top" id="efs-gd-seK"/>
                             <constraint firstAttribute="trailing" secondItem="7Fk-rv-Rs1" secondAttribute="trailing" id="iml-Aa-dFU"/>
                             <constraint firstItem="QPU-Oj-kor" firstAttribute="trailing" secondItem="JYz-t4-MUt" secondAttribute="trailingMargin" id="jXP-yG-mKs"/>
+                            <constraint firstItem="h1O-BF-eyb" firstAttribute="centerX" secondItem="Fe3-GN-OcO" secondAttribute="centerX" id="ntW-x1-6s0"/>
                             <constraint firstItem="QPU-Oj-kor" firstAttribute="top" secondItem="lFK-RJ-Ygq" secondAttribute="bottom" id="zI1-9S-tf9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="7Fk-rv-Rs1" id="KYK-KE-qvv"/>
+                        <outlet property="ratingStackView" destination="h1O-BF-eyb" id="zBX-vW-KNv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-Zk-Zxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sq1-Wi-K1O" userLabel="Exit" sceneMemberID="exit"/>

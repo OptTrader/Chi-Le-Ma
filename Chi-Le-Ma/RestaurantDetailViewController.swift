@@ -11,20 +11,20 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController
 {
-  @IBOutlet weak var restaurantNameLabel: UILabel!
-  @IBOutlet weak var restaurantLocationLabel: UILabel!
-  @IBOutlet weak var restaurantTypeLabel: UILabel!
-  @IBOutlet weak var restaurantImageView: UIImageView!
-  
-  var restaurant: Restaurant!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    restaurantNameLabel.text = restaurant.name
-    restaurantLocationLabel.text = restaurant.location
-    restaurantTypeLabel.text = restaurant.type
-    restaurantImageView.image = UIImage(named: restaurant.image)
-  }
+//  @IBOutlet weak var restaurantNameLabel: UILabel!
+//  @IBOutlet weak var restaurantLocationLabel: UILabel!
+//  @IBOutlet weak var restaurantTypeLabel: UILabel!
+//  @IBOutlet weak var restaurantImageView: UIImageView!
+//  
+//  var restaurant: Restaurant!
+//  
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    restaurantNameLabel.text = restaurant.name
+//    restaurantLocationLabel.text = restaurant.location
+//    restaurantTypeLabel.text = restaurant.type
+//    restaurantImageView.image = UIImage(named: restaurant.image)
+//  }
 
 }

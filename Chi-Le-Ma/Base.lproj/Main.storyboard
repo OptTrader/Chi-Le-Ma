@@ -141,12 +141,6 @@
                             <constraint firstItem="0FK-5m-HZW" firstAttribute="top" secondItem="Gqh-ej-RZR" secondAttribute="top" id="vdg-rT-KoX"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="restaurantImageView" destination="0FK-5m-HZW" id="QDc-Qe-bc1"/>
-                        <outlet property="restaurantLocationLabel" destination="UT7-su-Mpf" id="UDm-V4-GzQ"/>
-                        <outlet property="restaurantNameLabel" destination="uu8-fc-Jtf" id="LZh-jy-6u3"/>
-                        <outlet property="restaurantTypeLabel" destination="nH2-zk-kQY" id="BGN-5o-rbO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU7-Ql-wVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

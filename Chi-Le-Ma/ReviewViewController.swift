@@ -12,11 +12,16 @@ class ReviewViewController: UIViewController
 {
   @IBOutlet weak var backgroundImageView: UIImageView!
   @IBOutlet weak var ratingStackView: UIStackView!
+  @IBOutlet weak var dislikeButton: UIButton!
+  @IBOutlet weak var goodButton: UIButton!
+  @IBOutlet weak var greatButton: UIButton!
+  
   var rating: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // Apply a blurring effect to the background image view
     let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
     let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = view.bounds
@@ -24,9 +29,14 @@ class ReviewViewController: UIViewController
     
     // ratingStackView.transform = CGAffineTransformMakeScale(0.0, 0.0)
     // ratingStackView.transform = CGAffineTransformMakeScale(0.0, 500.0)
-    let scale = CGAffineTransformMakeScale(0.0, 0.0)
+//    let scale = CGAffineTransformMakeScale(0.0, 0.0)
+//    let translate = CGAffineTransformMakeTranslation(0, 500)
+//    ratingStackView.transform = CGAffineTransformConcat(scale, translate)
+    
     let translate = CGAffineTransformMakeTranslation(0, 500)
-    ratingStackView.transform = CGAffineTransformConcat(scale, translate)
+    dislikeButton.transform = translate
+    goodButton.transform = translate
+    greatButton.transform = translate
   }
   
   override func viewDidAppear(animated: Bool)
@@ -34,10 +44,23 @@ class ReviewViewController: UIViewController
 //    UIView.animateWithDuration(0.4, delay: 0.0, options: [], animations: {
 //      self.ratingStackView.transform = CGAffineTransformIdentity
 //    }, completion: nil)
-    UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: [], animations: {
-      self.ratingStackView.transform = CGAffineTransformIdentity
+    
+//    UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: [], animations: {
+//      self.ratingStackView.transform = CGAffineTransformIdentity
+//    }, completion: nil)
+
+    UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+      self.dislikeButton.transform = CGAffineTransformIdentity
     }, completion: nil)
     
+    UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+      self.goodButton.transform = CGAffineTransformIdentity
+      }, completion: nil)
+    
+    UIView.animateWithDuration(0.5, delay: 0.4, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+      self.greatButton.transform = CGAffineTransformIdentity
+      }, completion: nil)
+
   }
   
   @IBAction func ratingSelected(sender: UIButton)

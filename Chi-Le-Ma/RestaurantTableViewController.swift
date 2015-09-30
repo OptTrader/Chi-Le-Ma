@@ -41,7 +41,7 @@ class RestaurantTableViewController: UITableViewController
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     
     // Enable self sizing cells
-    tableView.estimatedRowHeight = 80.0
+    tableView.estimatedRowHeight = 36.0
     tableView.rowHeight = UITableViewAutomaticDimension
   }
   
@@ -73,7 +73,6 @@ class RestaurantTableViewController: UITableViewController
     cell.locationLabel.text = restaurants[indexPath.row].location
     cell.typeLabel.text = restaurants[indexPath.row].type
     cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
-    
     cell.accessoryType = restaurants[indexPath.row].isVisited ? .Checkmark : .None
     
     return cell

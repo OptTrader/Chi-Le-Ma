@@ -21,12 +21,29 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     super.viewDidLoad()
     
     restaurantImageView.image = UIImage(named: restaurant.image)
+    
+    // Change the color of the table view
     tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+    
+    // Remove the separators of the empty rows
     tableView.tableFooterView = UIView(frame: CGRectZero)
+    
+    // Change the color of the separator
     tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+    
+    // Set the title of the navigation bar
+    title = restaurant.name
+    
+    // Enable self sizing cells
     tableView.estimatedRowHeight = 36.0
     tableView.rowHeight = UITableViewAutomaticDimension
-    title = restaurant.name
+    
+    // Set the rating of the restaurant
+    if restaurant.rating != ""
+    {
+      ratingButton.setImage(UIImage(named: restaurant.rating), forState: UIControlState.Normal)
+    }
+    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -36,7 +53,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     navigationController?.setNavigationBarHidden(false, animated: true)
   }
 
-  
   // MARK: - Table view data source
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

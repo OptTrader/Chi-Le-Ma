@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qNv-OB-zqH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="L3c-UK-3L1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurant Table View Controller-->
+        <!--Chi Le Ma-->
         <scene sceneID="DSa-St-a1e">
             <objects>
                 <tableViewController id="qNv-OB-zqH" customClass="RestaurantTableViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="yEE-87-h8U" customClass="RestaurantTableViewCell" customModule="Chi_Le_Ma" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yEE-87-h8U" id="hPT-qH-L2o">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -74,6 +74,7 @@
                                     <outlet property="nameLabel" destination="vQt-Xd-ZpF" id="TMT-Ig-sO3"/>
                                     <outlet property="thumbnailImageView" destination="Z7h-FG-DJ6" id="Syi-ob-v3w"/>
                                     <outlet property="typeLabel" destination="evp-w7-V74" id="Mx9-k2-qax"/>
+                                    <segue destination="TkE-8K-vvf" kind="show" identifier="showRestaurantDetail" id="Bs2-ze-gZW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,8 +83,90 @@
                             <outlet property="delegate" destination="qNv-OB-zqH" id="S9a-R6-4fl"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Chi Le Ma" id="bKA-pE-ROJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bI-Pz-Imf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="278"/>
+        </scene>
+        <!--Restaurant Detail View Controller-->
+        <scene sceneID="aX5-dr-oBD">
+            <objects>
+                <viewController id="TkE-8K-vvf" customClass="RestaurantDetailViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HR0-aP-ufV"/>
+                        <viewControllerLayoutGuide type="bottom" id="T4K-Fa-NgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gqh-ej-RZR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-5m-HZW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-Zb-ZCZ">
+                                <rect key="frame" x="175" y="160" width="250" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uu8-fc-Jtf">
+                                        <rect key="frame" x="90" y="0.0" width="70" height="35"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT7-su-Mpf">
+                                        <rect key="frame" x="91" y="45" width="68" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH2-zk-kQY">
+                                        <rect key="frame" x="107" y="80" width="37" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="luf-8F-IFQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0FK-5m-HZW" firstAttribute="leading" secondItem="Gqh-ej-RZR" secondAttribute="leading" id="EFq-Xi-qlq"/>
+                            <constraint firstItem="0FK-5m-HZW" firstAttribute="bottom" secondItem="T4K-Fa-NgA" secondAttribute="top" id="KN3-Id-Ixs"/>
+                            <constraint firstItem="iC4-Zb-ZCZ" firstAttribute="top" secondItem="HR0-aP-ufV" secondAttribute="bottom" constant="96" id="gWD-Qa-MKO"/>
+                            <constraint firstItem="iC4-Zb-ZCZ" firstAttribute="centerX" secondItem="Gqh-ej-RZR" secondAttribute="centerX" id="jX4-f1-Z3s"/>
+                            <constraint firstAttribute="trailing" secondItem="0FK-5m-HZW" secondAttribute="trailing" id="lba-z8-Uo9"/>
+                            <constraint firstItem="0FK-5m-HZW" firstAttribute="top" secondItem="Gqh-ej-RZR" secondAttribute="top" id="vdg-rT-KoX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="0FK-5m-HZW" id="QDc-Qe-bc1"/>
+                        <outlet property="restaurantLocationLabel" destination="UT7-su-Mpf" id="UDm-V4-GzQ"/>
+                        <outlet property="restaurantNameLabel" destination="uu8-fc-Jtf" id="LZh-jy-6u3"/>
+                        <outlet property="restaurantTypeLabel" destination="nH2-zk-kQY" id="BGN-5o-rbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU7-Ql-wVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ujx-Rl-eWR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L3c-UK-3L1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="938-vp-ZeH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qNv-OB-zqH" kind="relationship" relationship="rootViewController" id="bEt-1O-Qcu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0s-X9-i9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="280" y="278"/>
         </scene>

@@ -21,6 +21,7 @@
 		7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7ADDE3601BBD727500B224E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ADDE35F1BBD727500B224E0 /* MapKit.framework */; };
 		7ADDE3621BBD798400B224E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDE3611BBD798400B224E0 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7ADDE3641BBD8FBC00B224E0 /* AddRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDE3631BBD8FBC00B224E0 /* AddRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7ADDE35F1BBD727500B224E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7ADDE3611BBD798400B224E0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7ADDE3631BBD8FBC00B224E0 /* AddRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				7A5C782D1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift */,
 				7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */,
 				7ADDE3611BBD798400B224E0 /* MapViewController.swift */,
+				7ADDE3631BBD8FBC00B224E0 /* AddRestaurantViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */,
 				7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */,
 				7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */,
+				7ADDE3641BBD8FBC00B224E0 /* AddRestaurantViewController.swift in Sources */,
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,
 				7A5C78271BBA5F2B00B877B4 /* RestaurantTableViewController.swift in Sources */,
 				7ADDE3621BBD798400B224E0 /* MapViewController.swift in Sources */,

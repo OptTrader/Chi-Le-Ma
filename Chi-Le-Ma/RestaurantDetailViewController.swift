@@ -20,7 +20,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    restaurantImageView.image = UIImage(named: restaurant.image)
+    restaurantImageView.image = UIImage(data: restaurant.image!)
     
     // Change the color of the table view
     tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
@@ -39,11 +39,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     tableView.rowHeight = UITableViewAutomaticDimension
     
     // Set the rating of the restaurant
-    if restaurant.rating != ""
+    if let rating = restaurant.rating where rating != ""
     {
-      ratingButton.setImage(UIImage(named: restaurant.rating), forState: UIControlState.Normal)
+      ratingButton.setImage(UIImage(named: restaurant.rating!), forState: UIControlState.Normal)
     }
-    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -80,7 +79,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
       cell.valueLabel.text = restaurant.phoneNumber
     case 4:
       cell.fieldLabel.text = "Been here"
-      cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've been here before" : "No"
+      if let isVisited = restaurant.isVisited?.boolValue
+      {
+        cell.valueLabel.text = isVisited ? "Yes, I've been here before" : "No"
+      }
     default:
       cell.fieldLabel.text = ""
       cell.valueLabel.text = ""

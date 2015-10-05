@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurantViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
@@ -14,9 +15,11 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var typeTextField: UITextField!
   @IBOutlet weak var locationTextField: UITextField!
+  @IBOutlet weak var phoneNumberTextField: UITextField!
   @IBOutlet weak var yesButton: UIButton!
   @IBOutlet weak var noButton: UIButton!
   
+  var restaurant: Restaurant!
   var isVisited = true
   
   override func viewDidLoad() {
@@ -71,6 +74,7 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
     let name = nameTextField.text
     let type = typeTextField.text
     let location = locationTextField.text
+    let phoneNumber = phoneNumberTextField.text
     
     // Validate input fields
     if name == "" || type == "" || location == ""
@@ -80,12 +84,33 @@ class AddRestaurantViewController: UITableViewController, UIImagePickerControlle
       self.presentViewController(alertController, animated: true, completion: nil)
       return
     }
-    // Print input data to console
-    print("Name: \(name)")
-    print("Type: \(type)")
-    print("Locaton: \(location)")
-    print("Have you Been here: \(isVisited)")
     
+    if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    {
+      restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+      restaurant.name = name!
+      restaurant.type = type!
+      restaurant.location = location!
+      restaurant.phoneNumber = phoneNumber!
+      if let restaurantImage = imageView.image
+      {
+        restaurant.image = UIImagePNGRepresentation(restaurantImage)
+      }
+      restaurant.isVisited = isVisited
+      do {
+        try managedObjectContext.save()
+      } catch {
+        print(error)
+        return
+      }
+    }
+  
+//    // Print input data to console
+//    print("Name: \(name)")
+//    print("Type: \(type)")
+//    print("Locaton: \(location)")
+//    print("Have you Been here: \(isVisited)")
+//    
     // Dismiss the view controller
     dismissViewControllerAnimated(true, completion: nil)
   }

@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -414,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnn-4z-MOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3033" y="502"/>
+            <point key="canvasLocation" x="2221" y="531"/>
         </scene>
         <!--New Restaurant-->
         <scene sceneID="LH1-S2-y0V">
@@ -734,6 +735,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0s-X9-i9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="280" y="278"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="95U-j7-1an">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="04m-Ed-mEk" customClass="WalkthroughPageViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVm-DO-DGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="927"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="232-wk-fJ4">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="lgG-7y-KZz" customClass="WalkthroughContentViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1pq-Nf-XPC"/>
+                        <viewControllerLayoutGuide type="bottom" id="5LC-fJ-L2Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AzL-Gu-Lxc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-Zh-6QO">
+                                <rect key="frame" x="30" y="83" width="540" height="418"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1bj-Zh-6QO" secondAttribute="height" multiplier="270:209" id="Bs1-PV-EGE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJQ-bj-r9k">
+                                <rect key="frame" x="159" y="519" width="282" height="64"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="BFo-Dj-1pa"/>
+                                    <constraint firstAttribute="height" constant="64" id="rIh-fn-Zqw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0sy-Km-Btu">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                                <animations/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-Hm-djd">
+                                <rect key="frame" x="221" y="28" width="158" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX6-WC-46H">
+                                <rect key="frame" x="534" y="562" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="itt-GJ-gtZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="kmY-8p-lEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.89019607840000003" green="0.23921568630000001" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="lgG-7y-KZz" eventType="touchUpInside" id="xW4-uC-2g9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.23921568627450979" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iX6-WC-46H" firstAttribute="trailing" secondItem="AzL-Gu-Lxc" secondAttribute="trailingMargin" id="1D8-WM-hGE"/>
+                            <constraint firstItem="xJQ-bj-r9k" firstAttribute="centerX" secondItem="AzL-Gu-Lxc" secondAttribute="centerX" id="263-RE-JHr"/>
+                            <constraint firstItem="xJQ-bj-r9k" firstAttribute="top" secondItem="1bj-Zh-6QO" secondAttribute="bottom" constant="18" id="60h-kN-0Ek"/>
+                            <constraint firstItem="5LC-fJ-L2Q" firstAttribute="top" secondItem="iX6-WC-46H" secondAttribute="bottom" constant="8" id="Ova-us-Sbo"/>
+                            <constraint firstItem="5LC-fJ-L2Q" firstAttribute="top" secondItem="0sy-Km-Btu" secondAttribute="bottom" constant="8" id="P49-VD-rXy"/>
+                            <constraint firstItem="xFa-Hm-djd" firstAttribute="top" secondItem="1pq-Nf-XPC" secondAttribute="bottom" constant="8" id="cWz-qb-3h3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bj-Zh-6QO" secondAttribute="trailing" constant="10" id="eqb-Oy-0R3"/>
+                            <constraint firstItem="xFa-Hm-djd" firstAttribute="centerX" secondItem="AzL-Gu-Lxc" secondAttribute="centerX" id="jpp-dQ-zzR"/>
+                            <constraint firstItem="0sy-Km-Btu" firstAttribute="centerX" secondItem="AzL-Gu-Lxc" secondAttribute="centerX" id="pTZ-ZL-a3T"/>
+                            <constraint firstItem="1bj-Zh-6QO" firstAttribute="leading" secondItem="AzL-Gu-Lxc" secondAttribute="leadingMargin" constant="10" id="qB3-6c-gg1"/>
+                            <constraint firstItem="1bj-Zh-6QO" firstAttribute="top" secondItem="xFa-Hm-djd" secondAttribute="bottom" constant="14" id="roA-7h-cUg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="1bj-Zh-6QO" id="L6N-q0-JAE"/>
+                        <outlet property="contentLabel" destination="xJQ-bj-r9k" id="wwb-0c-RS3"/>
+                        <outlet property="forwardButton" destination="iX6-WC-46H" id="zpS-Np-48d"/>
+                        <outlet property="headingLabel" destination="xFa-Hm-djd" id="sfO-k6-ql6"/>
+                        <outlet property="pageControl" destination="0sy-Km-Btu" id="qgI-Qc-nh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9B-hv-hgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="929"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d6w-DU-nnU">

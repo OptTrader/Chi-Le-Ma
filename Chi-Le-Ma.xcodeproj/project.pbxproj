@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A1021161BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A1021141BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		7A29F5121BC570480009A312 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A29F5141BC5716E0009A312 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */; };
 		7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */; };
 		7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		7A1021151BC11BB8005C413C /* Chi-Le-Ma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Chi-Le-Ma.xcdatamodel"; sourceTree = "<group>"; };
+		7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		7A5C77F51BBA5EE200B877B4 /* Chi-Le-Ma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi-Le-Ma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C77FD1BBA5EE200B877B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				7ADDE35C1BBC354F00B224E0 /* ReviewViewController.swift */,
 				7ADDE3611BBD798400B224E0 /* MapViewController.swift */,
 				7ADDE3631BBD8FBC00B224E0 /* AddRestaurantViewController.swift */,
+				7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */,
+				7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 				7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */,
 				7A1021161BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld in Sources */,
 				7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */,
+				7A29F5121BC570480009A312 /* WalkthroughContentViewController.swift in Sources */,
+				7A29F5141BC5716E0009A312 /* WalkthroughPageViewController.swift in Sources */,
 				7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */,
 				7ADDE3641BBD8FBC00B224E0 /* AddRestaurantViewController.swift in Sources */,
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,

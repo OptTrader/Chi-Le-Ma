@@ -10,6 +10,8 @@
 		7A1021161BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A1021141BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		7A29F5121BC570480009A312 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A29F5141BC5716E0009A312 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A29F5191BC60F910009A312 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A29F5181BC60F910009A312 /* about.storyboard */; settings = {ASSET_TAGS = (); }; };
+		7A29F51C1BC60FAE0009A312 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A29F51A1BC60FAE0009A312 /* discover.storyboard */; settings = {ASSET_TAGS = (); }; };
 		7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */; };
 		7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */; };
 		7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		7A1021151BC11BB8005C413C /* Chi-Le-Ma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Chi-Le-Ma.xcdatamodel"; sourceTree = "<group>"; };
 		7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		7A29F5181BC60F910009A312 /* about.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = about.storyboard; sourceTree = "<group>"; };
+		7A29F51B1BC60FAE0009A312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/discover.storyboard; sourceTree = "<group>"; };
 		7A5C77F51BBA5EE200B877B4 /* Chi-Le-Ma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi-Le-Ma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C77FD1BBA5EE200B877B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +117,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A29F51D1BC60FC10009A312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C78011BBA5EE200B877B4 /* LaunchScreen.storyboard */,
+				7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */,
+				7A29F51A1BC60FAE0009A312 /* discover.storyboard */,
+				7A29F5181BC60F910009A312 /* about.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7A5C77EC1BBA5EE100B877B4 = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +153,7 @@
 		7A5C77F71BBA5EE200B877B4 /* Chi-Le-Ma */ = {
 			isa = PBXGroup;
 			children = (
-				7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */,
+				7A29F51D1BC60FC10009A312 /* Views */,
 				7A5C78281BBA768600B877B4 /* Controllers */,
 				7A5C78311BBB83B700B877B4 /* Models */,
 				7A5C782C1BBA830A00B877B4 /* Cells */,
@@ -184,7 +199,6 @@
 			children = (
 				7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */,
 				7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */,
-				7A5C78011BBA5EE200B877B4 /* LaunchScreen.storyboard */,
 				7A5C78041BBA5EE200B877B4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -317,6 +331,8 @@
 			files = (
 				7A5C78031BBA5EE200B877B4 /* LaunchScreen.storyboard in Resources */,
 				7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */,
+				7A29F51C1BC60FAE0009A312 /* discover.storyboard in Resources */,
+				7A29F5191BC60F910009A312 /* about.storyboard in Resources */,
 				7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +405,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7A29F51A1BC60FAE0009A312 /* discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A29F51B1BC60FAE0009A312 /* Base */,
+			);
+			name = discover.storyboard;
+			sourceTree = "<group>";
+		};
 		7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

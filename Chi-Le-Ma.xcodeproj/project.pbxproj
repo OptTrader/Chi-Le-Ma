@@ -14,6 +14,8 @@
 		7A29F51C1BC60FAE0009A312 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A29F51A1BC60FAE0009A312 /* discover.storyboard */; settings = {ASSET_TAGS = (); }; };
 		7A29F51F1BC621440009A312 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F51E1BC621440009A312 /* AboutTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A29F5211BC635BD0009A312 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5201BC635BD0009A312 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A29F5241BC63B410009A312 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29F5231BC63B410009A312 /* CloudKit.framework */; };
+		7A29F5261BC642BD0009A312 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5251BC642BD0009A312 /* DiscoverTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */; };
 		7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */; };
 		7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */; };
@@ -56,6 +58,9 @@
 		7A29F51B1BC60FAE0009A312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/discover.storyboard; sourceTree = "<group>"; };
 		7A29F51E1BC621440009A312 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		7A29F5201BC635BD0009A312 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7A29F5221BC63B240009A312 /* Chi-Le-Ma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chi-Le-Ma.entitlements"; sourceTree = "<group>"; };
+		7A29F5231BC63B410009A312 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		7A29F5251BC642BD0009A312 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		7A5C77F51BBA5EE200B877B4 /* Chi-Le-Ma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi-Le-Ma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C77FD1BBA5EE200B877B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADDE3601BBD727500B224E0 /* MapKit.framework in Frameworks */,
+				7A29F5241BC63B410009A312 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,7 @@
 		7A1021181BC11BDC005C413C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A29F5231BC63B410009A312 /* CloudKit.framework */,
 				7ADDE35F1BBD727500B224E0 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -157,6 +164,7 @@
 		7A5C77F71BBA5EE200B877B4 /* Chi-Le-Ma */ = {
 			isa = PBXGroup;
 			children = (
+				7A29F5221BC63B240009A312 /* Chi-Le-Ma.entitlements */,
 				7A29F51D1BC60FC10009A312 /* Views */,
 				7A5C78281BBA768600B877B4 /* Controllers */,
 				7A5C78311BBB83B700B877B4 /* Models */,
@@ -196,6 +204,7 @@
 				7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */,
 				7A29F51E1BC621440009A312 /* AboutTableViewController.swift */,
 				7A29F5201BC635BD0009A312 /* WebViewController.swift */,
+				7A29F5251BC642BD0009A312 /* DiscoverTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,8 +303,12 @@
 				TargetAttributes = {
 					7A5C77F41BBA5EE200B877B4 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = KG5698275Z;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -377,6 +390,7 @@
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,
 				7A29F5211BC635BD0009A312 /* WebViewController.swift in Sources */,
 				7A5C78271BBA5F2B00B877B4 /* RestaurantTableViewController.swift in Sources */,
+				7A29F5261BC642BD0009A312 /* DiscoverTableViewController.swift in Sources */,
 				7ADDE3621BBD798400B224E0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,10 +539,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Chi-Le-Ma/Chi-Le-Ma.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Chi-Le-Ma/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisjkong.Chi-Le-Ma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -536,10 +554,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Chi-Le-Ma/Chi-Le-Ma.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Chi-Le-Ma/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisjkong.Chi-Le-Ma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

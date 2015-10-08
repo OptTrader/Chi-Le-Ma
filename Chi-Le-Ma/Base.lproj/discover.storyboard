@@ -7,14 +7,14 @@
         <!--Discover-->
         <scene sceneID="ySg-l6-JWw">
             <objects>
-                <tableViewController id="s5I-aF-VHR" sceneMemberID="viewController">
+                <tableViewController id="s5I-aF-VHR" customClass="DiscoverTableViewController" customModule="Chi_Le_Ma" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKQ-HZ-lST">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jel-uC-sSe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="jel-uC-sSe">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jel-uC-sSe" id="cEk-l9-Nz3">
@@ -31,8 +31,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Discover" id="8NV-9w-Ped"/>
+                    <connections>
+                        <outlet property="spinner" destination="7cw-Ls-HJi" id="fRN-iW-yE6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmi-d2-4dU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="7cw-Ls-HJi">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="1730" y="939"/>
         </scene>

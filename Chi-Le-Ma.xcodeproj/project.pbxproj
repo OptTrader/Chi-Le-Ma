@@ -16,6 +16,7 @@
 		7A29F5211BC635BD0009A312 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5201BC635BD0009A312 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A29F5241BC63B410009A312 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A29F5231BC63B410009A312 /* CloudKit.framework */; };
 		7A29F5261BC642BD0009A312 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5251BC642BD0009A312 /* DiscoverTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A29F5281BC6BF0B0009A312 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5271BC6BF0A0009A312 /* DiscoverTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */; };
 		7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */; };
 		7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		7A29F5221BC63B240009A312 /* Chi-Le-Ma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chi-Le-Ma.entitlements"; sourceTree = "<group>"; };
 		7A29F5231BC63B410009A312 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7A29F5251BC642BD0009A312 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		7A29F5271BC6BF0A0009A312 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		7A5C77F51BBA5EE200B877B4 /* Chi-Le-Ma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi-Le-Ma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C77FD1BBA5EE200B877B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				7A5C782A1BBA804A00B877B4 /* RestaurantTableViewCell.swift */,
 				7ADDE35A1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift */,
+				7A29F5271BC6BF0A0009A312 /* DiscoverTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				7A5C782B1BBA804A00B877B4 /* RestaurantTableViewCell.swift in Sources */,
 				7A29F5121BC570480009A312 /* WalkthroughContentViewController.swift in Sources */,
 				7A29F5141BC5716E0009A312 /* WalkthroughPageViewController.swift in Sources */,
+				7A29F5281BC6BF0B0009A312 /* DiscoverTableViewCell.swift in Sources */,
 				7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */,
 				7ADDE3641BBD8FBC00B224E0 /* AddRestaurantViewController.swift in Sources */,
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,

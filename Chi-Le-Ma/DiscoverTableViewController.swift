@@ -46,7 +46,7 @@ class DiscoverTableViewController: UITableViewController
     
     // Create the query operation with query
     let queryOperation = CKQueryOperation(query: query)
-    queryOperation.desiredKeys = ["name"]
+    queryOperation.desiredKeys = ["name", "type", "location"]
     queryOperation.queuePriority = .VeryHigh
     queryOperation.resultsLimit = 50
     queryOperation.recordFetchedBlock = { (record: CKRecord!) -> Void in
@@ -66,11 +66,13 @@ class DiscoverTableViewController: UITableViewController
       print("Successfully retrieve the data from iCloud")
       self.refreshControl?.endRefreshing()
       NSOperationQueue.mainQueue().addOperationWithBlock()
-        {
-          self.spinner.stopAnimating()
-          self.tableView.reloadData()
+      {
+        self.spinner.stopAnimating()
+        self.tableView.reloadData()
       }
     }
+    // Clear array
+    restaurants.removeAll()
     
     // Execute the query
     publicDatabase.addOperation(queryOperation)
@@ -90,25 +92,27 @@ class DiscoverTableViewController: UITableViewController
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
   {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DiscoverTableViewCell
     
     // Configure the cell
     let restaurant = restaurants[indexPath.row]
-    cell.textLabel?.text = restaurant.objectForKey("name") as? String
+    cell.nameLabel.text = restaurant.objectForKey("name") as? String
+    cell.locationLabel.text = restaurant.objectForKey("location") as? String
+    cell.typeLabel.text = restaurant.objectForKey("type") as? String
     
     // Set the default image
-    cell.imageView?.image = UIImage(named: "photoalbum")
+    cell.bgImageView.image = nil
     
     // Check if the image is stored in cache
     if let imageFileURL = imageCache.objectForKey(restaurant.recordID) as? NSURL
     {
       // Fetch image from cache
       print("Get image from cache")
-      cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageFileURL)!)
+      cell.bgImageView.image = UIImage(data: NSData(contentsOfURL: imageFileURL)!)
     
     } else {
       
-      // Fetch Image from Cloud in background
+      // Fetch image from iCloud in background
       let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
       let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
       fetchRecordsImageOperation.desiredKeys = ["image"]
@@ -127,7 +131,7 @@ class DiscoverTableViewController: UITableViewController
           {
             if let imageAsset = restaurantRecord.objectForKey("image") as? CKAsset
             {
-              cell.imageView?.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
+              cell.bgImageView.image = UIImage(data: NSData(contentsOfURL: imageAsset.fileURL)!)
               
               // Add the image URL to cache
               self.imageCache.setObject(imageAsset.fileURL, forKey: restaurant.recordID)
@@ -141,7 +145,5 @@ class DiscoverTableViewController: UITableViewController
     
     return cell
   }
-
-
   
 }

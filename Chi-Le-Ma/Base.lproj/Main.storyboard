@@ -862,8 +862,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="L3c-UK-3L1" kind="relationship" relationship="viewControllers" id="geG-WO-8Wl"/>
-                        <segue destination="r6Q-i4-xe7" kind="relationship" relationship="viewControllers" id="v3e-Tw-YQK"/>
                         <segue destination="BNR-XQ-LUn" kind="relationship" relationship="viewControllers" id="9z6-my-pLm"/>
+                        <segue destination="r6Q-i4-xe7" kind="relationship" relationship="viewControllers" id="v3e-Tw-YQK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDd-1b-6cQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -888,7 +888,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j12-wQ-NVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="688"/>
+            <point key="canvasLocation" x="825" y="696"/>
         </scene>
     </scenes>
     <resources>

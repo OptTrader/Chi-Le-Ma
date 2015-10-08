@@ -12,6 +12,8 @@
 		7A29F5141BC5716E0009A312 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A29F5191BC60F910009A312 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A29F5181BC60F910009A312 /* about.storyboard */; settings = {ASSET_TAGS = (); }; };
 		7A29F51C1BC60FAE0009A312 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A29F51A1BC60FAE0009A312 /* discover.storyboard */; settings = {ASSET_TAGS = (); }; };
+		7A29F51F1BC621440009A312 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F51E1BC621440009A312 /* AboutTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7A29F5211BC635BD0009A312 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A29F5201BC635BD0009A312 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */; };
 		7A5C77FE1BBA5EE200B877B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FC1BBA5EE200B877B4 /* Main.storyboard */; };
 		7A5C78001BBA5EE200B877B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5C77FF1BBA5EE200B877B4 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		7A29F5181BC60F910009A312 /* about.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = about.storyboard; sourceTree = "<group>"; };
 		7A29F51B1BC60FAE0009A312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/discover.storyboard; sourceTree = "<group>"; };
+		7A29F51E1BC621440009A312 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		7A29F5201BC635BD0009A312 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7A5C77F51BBA5EE200B877B4 /* Chi-Le-Ma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi-Le-Ma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5C77F81BBA5EE200B877B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5C77FD1BBA5EE200B877B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				7ADDE3631BBD8FBC00B224E0 /* AddRestaurantViewController.swift */,
 				7A29F5111BC570480009A312 /* WalkthroughContentViewController.swift */,
 				7A29F5131BC5716E0009A312 /* WalkthroughPageViewController.swift */,
+				7A29F51E1BC621440009A312 /* AboutTableViewController.swift */,
+				7A29F5201BC635BD0009A312 /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5C78301BBB826500B877B4 /* Restaurant.swift in Sources */,
+				7A29F51F1BC621440009A312 /* AboutTableViewController.swift in Sources */,
 				7A5C77F91BBA5EE200B877B4 /* AppDelegate.swift in Sources */,
 				7ADDE35D1BBC354F00B224E0 /* ReviewViewController.swift in Sources */,
 				7A1021161BC11BB8005C413C /* Chi-Le-Ma.xcdatamodeld in Sources */,
@@ -368,6 +375,7 @@
 				7ADDE35B1BBBCB7500B224E0 /* RestaurantDetailTableViewCell.swift in Sources */,
 				7ADDE3641BBD8FBC00B224E0 /* AddRestaurantViewController.swift in Sources */,
 				7A5C782E1BBB7A6A00B877B4 /* RestaurantDetailViewController.swift in Sources */,
+				7A29F5211BC635BD0009A312 /* WebViewController.swift in Sources */,
 				7A5C78271BBA5F2B00B877B4 /* RestaurantTableViewController.swift in Sources */,
 				7ADDE3621BBD798400B224E0 /* MapViewController.swift in Sources */,
 			);
